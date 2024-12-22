@@ -1,7 +1,7 @@
 # Use the base ASP.NET image from Microsoft
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 7091
 
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
