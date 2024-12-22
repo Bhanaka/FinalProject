@@ -1,9 +1,9 @@
 ﻿namespace UserService.UserDTO
 {
-    public class LoginRequest
+    public class LoginRequestDto
     {
-        private String reqUserName { get; set; }
-        private String reqPassword { get; set; }
+        public String reqUserName { get; set; }
+        public String reqPassword { get; set; }
 
     }
 }
