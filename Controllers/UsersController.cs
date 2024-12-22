@@ -29,13 +29,29 @@ namespace UserService.Controllers
             {
                 return BadRequest("User name or password are requied");
             }
-            else { 
-                var test = _systemUserService.LoginRequestParam(userName, password);
-                return Ok(test);
+
+            // Authenticate user via the service
+            string result = _systemUserService.LoginRequestParam(userName, password);
+
+            if (result == "Login successful!")
+            {
+                return Ok(new { message = result });
             }
+
 
             return Unauthorized("Invalid user name or password");
         }
+        [HttpGet("getAllUser")]
+        public IActionResult getAllUser() {
+
+            return Ok();
+        }
+        [HttpGet("getUserById /{id?}")]
+        public IActionResult getUserById(int? id)
+        {
+            return Ok();
+        }
+
 
     }
 }
